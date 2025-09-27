@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    srand(time(0));
+    int b = rand() % 100 + 1;
+    int count = 0;
+    int a = 1;
+    
+    printf("我想好了一个一到一百以内的数，你来猜猜吧");
+    
+    do {
+        scanf("%d", &a);
+        count++;
+        
+        if(a > b) {
+            printf("我想它大了点");
+        } else if(a < b) {
+            printf("我想它小了点");
+        }
+    } while(a != b);  // ← 这里应该是循环结束的条件
+    
+    printf("恭喜你用%d次猜中了", count);
+    
+    return 0;
+}
