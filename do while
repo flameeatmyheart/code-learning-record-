@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+	printf("ÊäÈëÒ»¸öÒ»¸öÊý×Ö£¬È»ºóÎÒ¸ø³öËüµÄÎ»Êý");
+	int n=0;
+	int x=0;
+	scanf("%d",&n);
+	if(n<0){
+		n=-n;
+	} 
+	do{
+		n/=10;
+		x++;	}
+		while(n>=0);
+		printf("%d\n",x);
+		return 0;
+}
